@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  # payment-service:
+  #   build: ./services/payment-service
+  #   container_name: payment-service
+  #   ports:
+  #     - "5001:80"
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+
+  # product-service:
+  #   build: ./services/product-service
+  #   container_name: product-service
+  #   ports:
+  #     - "5002:80"
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+
+  postgres:
+    image: postgres:15
+    container_name: product-postgres
+    environment:
+      POSTGRES_DB: productdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
