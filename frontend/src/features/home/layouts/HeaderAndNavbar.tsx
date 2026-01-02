@@ -1,12 +1,5 @@
-import { Header, Navbar } from '../components';
-
 const HeaderAndNavbar = () => {
-  return (
-    <div>
-      <Navbar />
-      <Header />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default HeaderAndNavbar;

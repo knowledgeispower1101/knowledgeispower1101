@@ -1,6 +1,6 @@
 import { useMatches } from 'react-router-dom';
 
-export type HeaderVariant = 'cart' | 'shop' | 'default';
+export type HeaderVariant = 'cart' | 'shop' | 'default' | 'login';
 
 interface Handle {
   headerVariant?: HeaderVariant;

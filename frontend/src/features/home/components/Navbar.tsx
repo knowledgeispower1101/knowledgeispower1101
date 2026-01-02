@@ -28,7 +28,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* RIGHT */}
         <div className="flex items-center gap-2">
           <Link to="/" className="hover:underline">
             Thông Báo
@@ -50,7 +49,7 @@ const Navbar = () => {
           </Link>
           <span className="opacity-70">|</span>
 
-          <Link to="/" className="hover:underline font-semibold">
+          <Link to="/login" className="hover:underline font-semibold">
             Đăng Nhập
           </Link>
         </div>

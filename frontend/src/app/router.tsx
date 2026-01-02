@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { MainLayout, RequireAuth } from './layouts';
-import { CartRoutes, HomeRoutes, PrivateProductRoutes, SearchRoutes, ShopRoutes, PublicProductRoutes } from '@/features';
+import { AuthenticationLayout, MainLayout, RequireAuth } from './layouts';
+import { CartRoutes, HomeRoutes, PrivateProductRoutes, SearchRoutes, ShopRoutes, PublicProductRoutes, UserRoutes } from '@/features';
 
 export const router = createBrowserRouter([
   {
@@ -14,5 +14,9 @@ export const router = createBrowserRouter([
         children: [...ShopRoutes, ...CartRoutes, ...PrivateProductRoutes],
       },
     ],
+  },
+  {
+    element: <AuthenticationLayout />,
+    children: [...UserRoutes],
   },
 ]);
